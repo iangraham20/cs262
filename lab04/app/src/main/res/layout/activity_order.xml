@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderActivity">
+    android:padding="@dimen/padding_regular"
+    android:id="@+id/activity_order"
+    tools:context="igc2.cs262.calvin.edu.lab04.OrderActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,32 +15,29 @@
         android:layout_marginTop="@dimen/text_margin_top"
         android:layout_marginBottom="@dimen/text_margin_bottom"
         android:textSize="@dimen/intro_text_size"
-        android:text="@string/choose_a_delivery_method"/>
-
+        android:text="@string/choose_delivery_method"/>
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/order_intro_text">
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/sameday"
-            android:text="@string/same_day_messenger_service"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/same_day_messenger_service"/>
+        <RadioButton
             android:id="@+id/nextday"
-            android:text="@string/next_day_ground_delivery"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/next_day_ground_delivery"/>
+        <RadioButton
             android:id="@+id/pickup"
-            android:text="@string/pick_up"
-            android:onClick="onRadioButtonClicked"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/pick_up"/>
     </RadioGroup>
-
-
 </RelativeLayout>

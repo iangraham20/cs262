@@ -7,7 +7,11 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import mcw33.cs262.calvin.edu.lab04.R;
+
 public class OrderActivity extends AppCompatActivity {
+
+    private static final String TAG_ACTIVITY = OrderActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,11 +19,8 @@ public class OrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order);
     }
 
-    private static final String TAG_ACTIVITY = OrderActivity.class.getSimpleName();
-
     public void displayToast(String message) {
-        Toast.makeText(getApplicationContext(), message,
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
     public void onRadioButtonClicked(View view) {
@@ -51,5 +52,3 @@ public class OrderActivity extends AppCompatActivity {
         }
     }
 }
-
-

@@ -2,7 +2,6 @@ package igc2.cs262.calvin.edu.lab04;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -10,13 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import mcw33.cs262.calvin.edu.lab04.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
 
@@ -45,28 +46,42 @@ public class MainActivity extends AppCompatActivity {
             default:
                 // Do nothing
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     public void displayToast(String message) {
-        Toast.makeText(getApplicationContext(), message,
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Displays a toast message for the food order
+     * and starts the OrderActivity activity.
+     * @param message   Message to display.
+     */
     public void showFoodOrder(String message) {
         displayToast(message);
         Intent intent = new Intent(this, OrderActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Shows a message that the donut image was clicked.
+     */
     public void showDonutOrder(View view) {
         showFoodOrder(getString(R.string.donut_order_message));
     }
 
+    /**
+     * Shows a message that the ice cream sandwich image was clicked.
+     */
     public void showIceCreamOrder(View view) {
         showFoodOrder(getString(R.string.ice_cream_order_message));
     }
 
+    /**
+     * Shows a message that the froyo image was clicked.
+     */
     public void showFroyoOrder(View view) {
         showFoodOrder(getString(R.string.froyo_order_message));
     }
