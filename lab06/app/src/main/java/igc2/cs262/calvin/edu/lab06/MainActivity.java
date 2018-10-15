@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import mcw33.cs262.calvin.edu.lab04.R;
+import igc2.cs262.calvin.edu.lab06.R;
 
 public class MainActivity extends AppCompatActivity {
 

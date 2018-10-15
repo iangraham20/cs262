@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">lab04</string>
+    <string name="app_name">lab06</string>
     <string name="action_settings">Settings</string>
     <string name="intro_text">Droid Desserts</string>
     <string name="choose_a_dessert">Choose a dessert</string>

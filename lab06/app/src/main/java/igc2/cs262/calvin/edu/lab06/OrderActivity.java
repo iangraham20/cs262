@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import mcw33.cs262.calvin.edu.lab04.R;
+import igc2.cs262.calvin.edu.lab06.R;
 
 public class OrderActivity extends AppCompatActivity {
 

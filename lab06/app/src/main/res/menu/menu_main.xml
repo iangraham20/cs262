@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="mcw33.cs262.calvin.edu.lab04.igc2.cs262.calvin.edu.lab04.MainActivity">
+    tools:context="igc2.cs262.calvin.edu.lab06.MainActivity">
     <item
         android:id="@+id/action_contact"
         android:title="@string/action_contact"

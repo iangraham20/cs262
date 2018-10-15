@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mcw33.cs262.calvin.edu.lab04">
+    package="igc2.cs262.calvin.edu.lab06">
 
     <application
         android:allowBackup="true"
@@ -22,7 +22,7 @@
         <activity
             android:name="igc2.cs262.calvin.edu.lab06.OrderActivity"
             android:label="@string/title_activity_order"
-            android:parentActivityName=".igc2.cs262.calvin.edu.lab04.MainActivity">
+            android:parentActivityName="igc2.cs262.calvin.edu.lab06.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="igc2.cs262.calvin.edu.lab06.MainActivity" />
