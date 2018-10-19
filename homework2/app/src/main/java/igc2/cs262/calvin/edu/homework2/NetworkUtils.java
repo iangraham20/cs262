@@ -18,6 +18,7 @@ public class NetworkUtils {
     static String getPlayerListInfo(String queryString) {
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
+        String playerListJSONString = null;
         try {
             Uri builtURI = Uri.parse(PLAYER_LIST_URL).buildUpon().build();
             URL requestURL = new URL(builtURI.toString());
@@ -25,27 +26,22 @@ public class NetworkUtils {
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
             InputStream inputStream = urlConnection.getInputStream();
-            StringBuffer buffer = new StringBuffer();
+            StringBuilder buffer = new StringBuilder();
             if (inputStream == null) {
-                // Nothing to do.
                 return null;
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
             String line;
             while ((line = reader.readLine()) != null) {
-   /* Since it's JSON, adding a newline isn't necessary (it won't affect
-      parsing) but it does make debugging a *lot* easier if you print out the
-      completed buffer for debugging. */
                 buffer.append(line + "\n");
             }
             if (buffer.length() == 0) {
-                // Stream was empty.  No point in parsing.
                 return null;
             }
-            bookJSONString = buffer.toString();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+            playerListJSONString = buffer.toString();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return "Connection Failed!";
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -57,9 +53,63 @@ public class NetworkUtils {
                     e.printStackTrace();
                 }
             }
+            if(playerListJSONString != null) {
+                Log.e(LOG_TAG, playerListJSONString);
+                return playerListJSONString;
+            } else {
+                return "";
+            }
         }
-        Log.d(LOG_TAG, bookJSONString);
-        return bookJSONString;
+    }
+
+    static String getPlayerIDInfo(String queryString) {
+
+        HttpURLConnection urlConnection = null;
+        BufferedReader reader = null;
+        String playerIDJSONString = null;
+
+        try {
+            Uri builtURI = Uri.parse(PLAYER_ID_URL).buildUpon().appendPath(queryString).build();
+            URL requestURL = new URL(builtURI.toString());
+            urlConnection = (HttpURLConnection) requestURL.openConnection();
+            urlConnection.setRequestMethod("GET");
+            urlConnection.connect();
+            InputStream inputStream = urlConnection.getInputStream();
+            StringBuilder buffer = new StringBuilder();
+            if (inputStream == null) {
+                return null;
+            }
+            reader = new BufferedReader(new InputStreamReader(inputStream));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line).append("\n");
+            }
+            if (buffer.length() == 0) {
+                return null;
+            }
+            playerIDJSONString = buffer.toString();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return "Connection failed!";
+        } finally {
+            if (urlConnection != null) {
+                urlConnection.disconnect();
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (playerIDJSONString != null) {
+                Log.e(LOG_TAG, playerIDJSONString);
+                return playerIDJSONString;
+            } else {
+                return "";
+            }
+        }
     }
 }
 
