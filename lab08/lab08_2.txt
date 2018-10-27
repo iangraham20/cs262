@@ -1,0 +1,5 @@
+So what does that P1.ID < P2.ID clause do in the last example query?
+This double checks that the IDs are different making sure that they are not duplicates.
+
+The query that joined the Player table to itself seems rather contrived. Can you think of a realistic situation in which you’d want to join a table to itself?
+Whenever a table contains references to data in itself like if an employee table contained a supervisorid column pointing to an employee that is the supervisor of the current employee.
