@@ -1,0 +1,52 @@
+Exercise 9.1
+
+Study the lab starter code and answer the following questions.
+
+    a. How many API endpoints does this application support and where are they implemented?
+
+        This application supports two API endpoints, which are implemented at the following locations:
+
+        https://calvincs262-monopoly.appspot.com/monopoly/v1/players
+        https://calvincs262-monopoly.appspot.com/monopoly/v1/player/ insert ID #
+
+
+    b. PlayerResource.java
+        i. What is the Java-based technology used to access data from a database?
+
+            The Java-based technology used to access the data is a JDBC or Java Database Connectivity, which is an API for Java languages that allows clients to access the database in specific ways.
+
+
+
+        Compare and contrast the following:
+            1. SQL query statements vs. JDBC statement objects
+
+                JDBC statement objects serve as an interface for the SQL query statements by taking in arguments and passing a reformatted version to the database.
+
+
+
+            2. SQL relations vs. JDBC result sets vs. List<Player>
+
+                SQL relations are sets of tuples containing elements that are linked to a data domain.
+
+                JDBC result sets are Java objects that contain result of executing SQL queries.
+
+                List<Player> is a list of player objects that are obtained through parsing the ResultSet object and adding the elements to the ResultSet as new elements of List<Player>.
+
+
+
+        iii. Under what circumstances would the function getValueStringOrNull() be used?
+
+            The getValueStringOrNull() method would be called if a player's ID value is NULL.
+
+
+    C. Player.java
+        i. What purpose does this Player DAO serve?
+
+            The DAO or Data Access Object creates an object-oriented version of the SQL relational database.
+
+
+
+        ii. How does it compare with the Player table?
+
+            It is exactly the same except that it is constructed through a Class structure instead of a database table.
+
