@@ -95,5 +95,3 @@ INSERT INTO HousingSituation VALUES (2, 2, 17, 0);
 INSERT INTO HousingSituation VALUES (2, 3, 5, 3);
 INSERT INTO HousingSituation VALUES (2, 3, 11, 2);
 INSERT INTO HousingSituation VALUES (2, 3, 2, 3);
-
-

@@ -1,0 +1,23 @@
+Ian Christensen
+D - Ok Programmers - EventConnect 
+
+Review the sprint 3 and presentation deliverables from the other team you are reviewing (see project deliverables #3 & #4) and do the following.
+
+a. Do their project management materials show the appropriate amount of activity?
+
+The project management materials show the bare minimum with almost no updates. The models all appear old and unprofessional making the contents unclear or confusing. Google drawing and other tool are a really simple way to make clean, understandable UI and UML models.
+
+b. Write a one-to-two-paragraph review of their models. Is their database schema well-formulated?
+
+The UML model is cleanly laid out and very minimalist, but the contents are extremely generic and essentially the diagram looks like boxes containing scribbles. The front-end of the application should be running by now so I would recommend taking quick screenshots of the application running and connect the images with lines using a image editor tool. The NFRs document contains appropriate information.
+The database schema is well drawn out and having only two tables keeps it simple, but some of the attributes have misleading or confusing names. For instance, I am unsure what "listGuest" and "dateRange" are. I assume date range has something to do with when an event happens, but I did not realize there was any range involved. As far as "listGuest" goes I am unsure what distinguishes it from "InterestCount" and whether one could be derived from the other. I am also unable to read the last attribute on the user table.
+
+c. Has there been an appropriate amount of code pushed into their client and server repos? Can you run the prototype and/or the database?
+
+According to the github insights tab the team has pushed an above average amount of code to the repo. Yes, the prototype appears to run correctly.
+
+d. Was their design presentation effective? What worked? What didn’t work? How would you rate their presentation relative to the others?
+
+The presentation contents were overly complicated and confusing especially the outdated models, which were not aesthetically pleasing whatsoever and tended to clutter the screen distracting from the presenters. The presenters seemed prepared and knowledgable about the application, but during the questions section it appeared that we had not given enough input as stakeholders or that basic ideas had not been considered. Royce Lloyd and Kelsey Brouwer appeared very professional and easily captivated the audience while talking without seeming nervous or underprepared. Enthusiastism really helped make the presentation interesting while calm confidence seemed to make the boring models more bareable.
+
+Save your review in a simple text file, teamReview3.txt, including your name and the name of the team you are reviewing, and submit it in Moodle. Be prepared to explain your review to them during their team meeting in lab 11.
