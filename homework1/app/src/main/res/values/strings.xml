@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">project01</string>
+    <string name="app_name">homework01</string>
     <string name="second_value">Value 2:</string>
     <string name="first_value">Value 1:</string>
     <string name="calculate_text">Calculate</string>
     <string name="operator">Operator:</string>
+    <string name="hint_string">Enter a number</string>
     <string-array name="operators">
         <item>+</item>
         <item>-</item>
